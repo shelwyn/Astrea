@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Page</title>
+	 <link rel="stylesheet" href="css/style.css">
+	 <script defer src="js/scripts.js"></script>
 
+</head>
+<body>
+<div id="logo-container"></div>
+
+    <div id="chat-container">
+       <div id="initial-message">
+	   <br><br><br><br>
+            <center><img src="img/astrea.png" alt="gbot" width="20%"></center><br>
+            <font size='3'>**Hi there!   I'm Astrea, your AI assistant powered by Gemini.<br>I'm here to help you with your questions and tasks. Just upload an image, and I'll do my best to understand and assist you. **
+        </font>
+		</div><p>
+		</p>
+    </div>
+    <div class="button-container" id="button-container">
+    <table>
+        <tr>
+            <Td><input type="file" class="file-input-btn" name="userimg" id="userimg" accept=".png" onchange="handleFileChange()"></Td>
+            <td>
+                <button id="submit-getdesc" class="file-input-btn-submit"  onclick="callFirstApi()">Send </button>
+            </td>
+        </tr>
+        </table>
+    </div>
+    
+    <div id="user-input-container">
+        <textarea id="user-input" placeholder="Type your message..." onkeydown="handleKeyPress(event)" disabled></textarea>
+        <button id="submit-btn" onclick="sendMessage()" disabled>
+            <img src="img/next.png" alt="Submit">
+        </button>
+    </div>
+
+
+</body>
+</html>
